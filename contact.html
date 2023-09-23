@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/style/userDefined.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,500;1,800&display=swap" rel="stylesheet">
+    <script defer src="./assets/js/menu.js"></script>
 </head>
 <body>
     <header class="border-bottom border-secondary">
@@ -15,17 +16,27 @@
             <div class="container nav-pills">
                 <a class="navbar-brand logo fw-bold text-white fs-1 fs-sm-5 fs-md-5 fs-lg-5 fs-xl-5 " href="index.html">get<span class="logo-primary">Linked</span></a>
 
-            <ul class="nav toggle mx-4">
-                <li class="nav-item"><a class="nav-link text-white" href="">timeline</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="">overview</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="">FAQs</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">contact</a></li>
+                <img id="mobile-menu" class="d-block d-lg-none d-xl-none" src="./assets/images/section 1/Vector.png" alt="menu">
 
-                
-                <a class="btn btn-outline px-5 text-white mx-5" href="register.html">Register</a>
-            </ul>
+                <ul class="nav toggle nav-menu mx-4">
+                    <div id="close-menu" class="close-menu">
+                        <div class="icons">
+                            <img class="d-block d-lg-none d-xl-none" src="./assets/images/section 1/circle.png" alt="menu">
+                            <img class="d-block d-lg-none d-xl-none close" src="./assets/images/section 1/close.png" alt="menu">
+                        </div>
+                    </div>
+                    
+
+                    <li class="nav-item"><a class="nav-link text-white" href="">timeline</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="">overview</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">contact</a></li>
+
+                    
+                    <a class="btn btn-outline px-5 text-white mx-4 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5" href="register.html">Register</a>
+                </ul>
             
-            <img class="d-block d-lg-none d-xl-none" src="./assets/images/section 1/Vector.png" alt="menu">
+            
             
             </div>
         </nav>
@@ -48,24 +59,28 @@
                 </div>
                 <div class="col-md-5">
                     <div class="shadow p-5 rounded-3 text-center" style="background-color: #1C152E;">
-                    <h5 class="text-start text-white">
+                    <h5 class="text-start primary-color">
                         Questions or need assistance?
                         <br>
                         Let us know about it!
                     </h5>
+                    <p class="d-block d-sm-none d-md-none d-lg-none d-xl-none text-start text-white">Email us below to any question related 
+                        to our event
+                    </p>
                     <form id="contactForm" class="py-3">
-                        <input class="form-control mb-4" type="text" id="name" placeholder="First Name">
-                        <input class="form-control mb-4" type="text" id="email" placeholder="Mail">
+                        <input class="form-control mb-4" type="text" id="name" name="first_name" placeholder="First Name">
+                        <input class="form-control mb-4" type="text" id="email" name="email" placeholder="Mail">
                         <div class="form-floating mb-4">
-                            <textarea name="" id="message" cols="30" rows="10" class="form-control" style="height: 140px; resize: none;"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" class="form-control" style="height: 140px; resize: none;"></textarea>
                             <label for="message" class="form-label">Message...</label>
                         </div>
 
+                        <p class="text-center text-primary fst-italic" id="resultMessage"></p>
 
                         <button class="btn text-white px-5 py-2" type="button" id="submitForm">Submit</button>
                     </form>
                     
-                    <p class="text-center text-primary fst-italic" id="resultMessage"></p>
+                    
                     </div>
                 </div>
             </div>
