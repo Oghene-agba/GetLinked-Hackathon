@@ -111,6 +111,56 @@ background: linear-gradient(90deg, rgba(254,52,145,1) 0%, rgba(213,52,252,1) 78%
     }
     
 }
+@media screen and (max-width: 600px){
+    header .nav-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        width: 100%;
+        height: 900px;
+        position: absolute;
+        top: 0rem;
+        right: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+        z-index: 9999;
+    }
+    header .nav-menu.active{
+        /* rgba(0, 0, 0, 0.918);  */
+        background: #150E28;
+        left: 0rem;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    header nav .nav-menu li{
+        margin: 5px;
+    }
+    header nav .nav-menu li a{
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
+    #mobile-menu{
+        cursor: pointer;
+    }
+    #close-menu{
+        cursor: pointer;
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+    }
+    .icons{
+        position: relative;
+    }
+    .close{
+        position: absolute;
+        top: .4rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    
+}
 @media screen and (max-width: 400px) {
     .innovation{
         margin-right: 0px;
@@ -154,7 +204,7 @@ background: linear-gradient(90deg, rgba(254,52,145,1) 0%, rgba(213,52,252,1) 78%
         position: absolute; top: -3rem;left: 6rem;
     }
     .card .fs{
-        font-size: .9rem !important;
+        font-size: .8rem !important;
     }
     .policy{
         width: 20rem;
