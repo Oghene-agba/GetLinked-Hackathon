@@ -15,17 +15,27 @@
             <div class="container nav-pills">
                 <a class="navbar-brand logo fw-bold text-white fs-1 fs-sm-5 fs-md-5 fs-lg-5 fs-xl-5 " href="index.html">get<span class="logo-primary">Linked</span></a>
 
-            <ul class="nav toggle mx-4">
-                <li class="nav-item"><a class="nav-link text-white" href="">timeline</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="">overview</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="">FAQs</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">contact</a></li>
+                <img id="mobile-menu" class="d-block d-lg-none d-xl-none" src="./assets/images/section 1/Vector.png" alt="menu">
 
-                
-                <a class="btn btn-outline px-5 text-white mx-5" href="register.html">Register</a>
-            </ul>
+                <ul class="nav toggle nav-menu mx-4">
+                    <div id="close-menu" class="close-menu">
+                        <div class="icons">
+                            <img class="d-block d-lg-none d-xl-none" src="./assets/images/section 1/circle.png" alt="menu">
+                            <img class="d-block d-lg-none d-xl-none close" src="./assets/images/section 1/close.png" alt="menu">
+                        </div>
+                    </div>
+                    
+
+                    <li class="nav-item"><a class="nav-link text-white" href="">timeline</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="">overview</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">contact</a></li>
+
+                    
+                    <a class="btn btn-outline px-5 text-white mx-4 mx-sm-5 mx-md-5 mx-lg-5 mx-xl-5" href="register.html">Register</a>
+                </ul>
             
-            <img class="d-block d-lg-none d-xl-none" src="./assets/images/section 1/Vector.png" alt="menu">
+            
             
             </div>
         </nav>
@@ -43,11 +53,11 @@
                 </div>
                 <div class="col-md-7">
                     <div class="shadow p-5 rounded-3 text-center" style="background-color: #1C152E;">
-                    <h5 class="text-start text-white">
+                    <h5 class="text-start secondary-color">
                         Register
                     </h5>
                     <h6 class="text-start text-white">
-                        Be a part of this movement! <span class="text-decoration-dotted">🕺</span>
+                        Be a part of this movement! <span class="text-decoration-dotted">🕺🕺</span>
                     </h6>
                     <h5 class="text-transform-capitalize text-start text-white">
                         Create your account
@@ -56,30 +66,31 @@
                         <div class="row">
                             <div class="col-md-6 text-start">
                                 <label for="" class="form-label text-white">Team's Name</label>
-                                <input class="form-control mb-4" type="text" id="" placeholder="Enter the name of your group">
+                                <input class="form-control mb-4" type="text" id="teamName" name="team_name" placeholder="Enter the name of your group">
                             </div>
                             <div class="col-md-6 text-start">
                                 <label for="" class="form-label text-white">Phone</label>
-                                <input class="form-control mb-4" type="text" id="" placeholder="Enter your phone number">
+                                <input class="form-control mb-4" type="text" id="phone" name="phone_number" placeholder="Enter your phone number">
                             </div>
                             <div class="col-md-6 text-start">
                                 <label for="" class="form-label text-white">Email</label>
-                                <input class="form-control mb-4" type="text" id="" placeholder="Enter your email address">
+                                <input class="form-control mb-4" type="email" id="email" name="email" placeholder="Enter your email address">
                             </div>
                             <div class="col-md-6 text-start">
                                 <label for="" class="form-label text-white">Project Topic</label>
-                                <input class="form-control mb-4" type="text" id="" placeholder="What is your group project topic">
+                                <input class="form-control mb-4" type="text" id="projectTopic" name="project_topic" placeholder="What is your group project topic">
                             </div>
                             <div class="col-md-6 text-start">
                                 <label for="" class="form-label text-white">Category</label>
-                                <select name="" id="category" class="form-select">
+                                <select name="category" id="category" class="form-select">
                                     <option value="Mobile" selected>Mobile </option>
-                                    <option value="Website" >Website </option>
+                                    <option value="Web" >Web </option>
+                                    <option value="Backend" >Backend </option>
                                 </select>
                             </div>
                             <div class="col-md-6 text-start">
                                 <label for="" class="form-label text-white">Group size</label>
-                                <select name="" id="group" class="form-select">
+                                <select name="group_size" id="groupSize" class="form-select">
                                     <option value="2" selected>2 </option>
                                     <option value="4" >4 </option>
                                     <option value="6" >6 </option>
@@ -89,19 +100,32 @@
                             </div>
                         </div>
 
-                        <p class="text-start text-white fst-italic pt-4">Please review your registration details before submitting</p>
+                        <p class="text-start fst-italic pt-4 secondary-color">Please review your registration details before submitting</p>
 
                         <p class="text-start text-white">
-                            <input type="checkbox">
+                            <input type="checkbox" id="privacy_policy" name="privacy_poclicy_accepted">
                             I agreed with the event terms and conditions and privacy policy
                         </p>
                         <button class="w-100 btn text-white px-5 py-2" type="button" id="submitForm">Register now</button>
                     </form>
 
-                    <p class="text-center text-primary fst-italic" id="resultMessage"></p>
+                    <p class="text-center text-primary fst-italic" id="errorContainer"></p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="d-block d-sm-none d-md-none d-lg-none d-xl-none container-fluid bg-transparent text-white border border-secondary mx-auto rounded-1 text-center h-50 m-3 py-3 px-4 p-sm-5 p-md-5 p-lg-5 p-xl-5" style="width: 300px; ">
+            <img class="w-50" src="./assets/images/register/congratulation.png" alt="image">
+            <h6 class="text-center fs-3">
+                Congratulations you have successfully Registered!
+            </h6>
+            
+            <p class="">
+                Yes, it was easy and you did it! check your mail box for next step 🧐
+            </p>
+
+            <a href="register.html" class="btn w-100 w-md-50 px-5 text-white">Back</a>
         </div>
     </main>
 
@@ -109,4 +133,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="./assets/js/register.js"></script>
+<script src="./assets/js/menu.js"></script>
 </html>
